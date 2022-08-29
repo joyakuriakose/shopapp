@@ -34,6 +34,8 @@ class _FruitListState extends State<FruitList> {
     "https://images.unsplash.com/photo-1512888482612-b5c7c4344c1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1782&q=80",
   ];
 
+
+
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<CartProvider>(context);
@@ -95,9 +97,16 @@ class _FruitListState extends State<FruitList> {
                                     alignment: Alignment.centerRight,
                                     child: InkWell(
                                      onTap: (){
-                                       DataBHelper!.insert(
-                                         Cart(id: id, productId: productId, productName: productName, initialPrice: initialPrice, productPrice: productPrice, quantity: quantity, unitTag: unitTag, image: image)
-                                       )
+                                       // DataBHelper!.insert(
+                                       //   Cart(id: index,
+                                       //       productId: productId[index].toString(),
+                                       //       productName: productName[index].toString(),
+                                       //       initialPrice: productPrice[index],
+                                       //       productPrice: productPrice![index].toString(),
+                                       //       quantity: quantity,
+                                       //       unitTag: unitTag[index],
+                                       //       image: image[index].toString())
+                                       // );
 
                                      },
                                       child: Container(
